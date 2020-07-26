@@ -41,13 +41,13 @@
                     </div>
                     
                     <span *ngIf="registroForm.submitted && registroForm.controls['password'].errors"
-                        class="text-danger animated fadeIn fast">Al menos 5 caracteres</span>                    
+                        class="text-danger animated fadeIn fast">Al menos 6 caracteres</span>                    
                     <div class="wrap-input100 m-b-16">
                         <input class="input100"
                                type="password" 
                                name="password"                                
                                [(ngModel)]="usuario.password"
-                               minlength="5"
+                               minlength="6"
                                required
                                placeholder="Password">
                         <span class="focus-input100"></span>
@@ -55,7 +55,8 @@
                     
                     <div class="flex-sb-m w-full p-t-3 p-b-24">
                         <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <input [(ngModel)]="recordarme"
+                                   class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                             <label class="label-checkbox100" for="ckb1">
                                 Recordar mi usuario
                             </label>

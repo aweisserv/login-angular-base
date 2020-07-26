@@ -11,7 +11,7 @@
                 </span>
 
                 <span *ngIf="loginForm.submitted && loginForm.controls['email'].errors"
-                class="text-danger animated fadeIn fast">El correo es obligatorio</span>
+                class="text-danger animated fadeIn fast">El campo email es obligatorio.</span>
 
                 <div class="wrap-input100 m-b-16">
                     <input class="input100" 
@@ -26,18 +26,22 @@
                     <span class="focus-input100"></span>
                 </div>
                 
-                <!-- <span class="text-danger">La contraseña debe de ser más de 6 letras</span> -->
-                <div class="wrap-input100 m-b-16" data-validate = "Password is required">
+                
+                <div class="wrap-input100 m-b-16">
                     <input class="input100"
                            type="password" 
-                           name="pass" 
+                           name="password"                                
+                           [(ngModel)]="usuario.password"
+                           minlength="6"
+                           required
                            placeholder="Password">
                     <span class="focus-input100"></span>
                 </div>
                 
                 <div class="flex-sb-m w-full p-t-3 p-b-24">
                     <div class="contact100-form-checkbox">
-                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <input [(ngModel)]="recordarme" 
+                               class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb1">
                             Recordar mi usuario
                         </label>
