@@ -21,12 +21,20 @@
 * {
 	margin: 0px; 
 	padding: 0px; 
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body, html {
 	height: 100%;
-	font-family: Ubuntu-Regular, sans-serif;
+  font-family: Ubuntu-Regular, sans-serif;
+  color: white !important;
+  background-color: transparent !important;
+}
+
+html {
+  background-image: url('../images/89328.png');
+  background-size: cover; 
+  background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 /*---------------------------------------------*/
@@ -136,7 +144,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -155,10 +163,19 @@ iframe {
 
 
 .wrap-login100 {
-  width: 390px;
+  width: 450px;
+  height: 620px;
   background: #fff;
+  opacity: 0.9;
   border-radius: 10px;
-  position: relative;
+}
+
+.wrap-login101 {
+  width: 450px;
+  height: 550px;
+  background: #fff;
+  opacity: 0.9;
+  border-radius: 10px;
 }
 
 
@@ -166,7 +183,8 @@ iframe {
 [ Form ]*/
 
 .login100-form {
-  width: 100%;
+  width: 85%;
+  margin: 30px;
 }
 
 .login100-form-title {
@@ -176,7 +194,6 @@ iframe {
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
-
   width: 100%;
   display: block;
 }

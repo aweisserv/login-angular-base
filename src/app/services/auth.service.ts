@@ -20,7 +20,7 @@ export class AuthService {
 
 
   logout() { 
-
+    localStorage.removeItem('token');
    }
 
 
@@ -74,17 +74,42 @@ export class AuthService {
     this.userToken = idToken;
     localStorage.setItem('token', idToken);
 
+    let hoy = new Date();
+    hoy.setSeconds( 3600 );
+
+    localStorage.setItem('expira', hoy.getTime().toString() );
+
   }
+
 
   leerToken(){
 
-    if ( localStorage.getItem('token')) {
+    if ( localStorage.getItem('token') ) {
       this.userToken = localStorage.getItem('token')
     } else {
       this.userToken = '';
     }
-
     return this.userToken;
-
   }
+
+
+  estaAutenticado() : boolean {
+
+    if ( this.userToken.length < 2 ) {
+      return false;
+    }
+
+    const expira = Number( localStorage.getItem('expira') );
+    const expiraDate = new Date();
+    expiraDate.setTime( expira );
+
+    // (cond) Si la fecha de expiración es mayor a la fecha actual
+    if ( expiraDate > new Date() ) {   
+      return true;
+    } else {
+      return false;
+    }
+    
+  }
+
 }
