@@ -1,6 +1,6 @@
 # LoginApp Angular   
 
-## Aplicación de demostración de autenticación con Auth0 
+## Aplicación de demostración de autenticación con formularios y uso de ngModel (Angular)
 | Allan Weisser Verdessi
 | a.weisser.v@gmail.com
 
