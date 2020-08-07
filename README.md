@@ -6,14 +6,13 @@
 
 
 Datos técnicos:
-  - Creada con Angular 9.1.4 y Bootstrap 4.5
-  - Backend con Firebase
-  - Autenticación mediante el uso de formularios y ngModel
+  - Creada con Angular 9.1.4.
+  - Backend con Firebase.
+  - Autenticación mediante el uso de formularios y ngModel.
   - Formulario de captura para la creación de usuarios.
   - Formulario de login.
-  - Uso de guards para bloquear rutas no son válidas si el usuario no está autenticado.
-  - UI/UX sencillo y moderno
-  - Estilos y animaciones con Bootstrap 4.5 y CSS
+  - Uso de guards para bloquear rutas restringidas si el usuario no está autenticado.
+  - Estilos y animaciones con Bootstrap 4.5 y CSS.
 
   
   #### Capturas:
@@ -27,3 +26,12 @@ Datos técnicos:
 ![Captura4](https://user-images.githubusercontent.com/19677373/88492907-37f63c80-cf7c-11ea-9906-4c7559fc4b81.PNG)
 
 ![Captura5](https://user-images.githubusercontent.com/19677373/88492908-388ed300-cf7c-11ea-9536-a1c63eed4710.PNG)
+
+## QuickStart
+
+- Clone the repo
+- Install node package manager (npm)
+- Install Angular > npm install -g @angular/cli
+- Navigate with terminal to the cloned project folder 
+- Run Angular > ng serve --o (This process might take seconds or minutes depending on your hardware)
+- When the previous step is done, a new browser window will open with the App running
